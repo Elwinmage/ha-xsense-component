@@ -3,18 +3,11 @@
 from __future__ import annotations
 
 from contextlib import suppress
-<<<<<<< HEAD
 from datetime import datetime, timedelta
 import json
 from typing import Any
 
 from xsense import AsyncXSense, House
-=======
-from datetime import timedelta
-from typing import Any
-
-from xsense import AsyncXSense
->>>>>>> ab1c48b7f13c71a02fb9c465b03915b1c04637a3
 from xsense.exceptions import APIFailure, AuthFailed, NotFoundError, SessionExpired
 
 from homeassistant.config_entries import ConfigEntry
