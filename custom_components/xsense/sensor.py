@@ -1,5 +1,4 @@
 """Support for xsense sensors."""
-
 from __future__ import annotations
 
 from xsense.device import Device
@@ -40,7 +39,6 @@ SENSORS: tuple[XSenseSensorEntityDescription, ...] = (
         key="wifi_ssid",
         translation_key="wifi_ssid",
         entity_category=EntityCategory.DIAGNOSTIC,
-        icon="mdi:access-point-network",
         exists_fn=lambda entity: "ssid" in entity.data,
         value_fn=lambda entity: entity.data["ssid"],
     ),
@@ -151,13 +149,13 @@ async def async_setup_entry(
     devices: list[Device] = []
     coordinator: XSenseDataUpdateCoordinator = hass.data[DOMAIN][entry.entry_id]
 
-    for station in coordinator.data["stations"].values():
+    for _, station in coordinator.data["stations"].items():
         devices.extend(
             XSenseSensorEntity(coordinator, station, description)
             for description in SENSORS
             if description.exists_fn(station)
         )
-    for dev in coordinator.data["devices"].values():
+    for _, dev in coordinator.data["devices"].items():
         devices.extend(
             XSenseSensorEntity(
                 coordinator, dev, description, station_id=dev.station.entity_id
