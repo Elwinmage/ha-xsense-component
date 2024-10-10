@@ -31,10 +31,7 @@ open HACS
 
 ____________________________________________________________
 go to custom repositories
-
-for last version add: https://github.com/Jarnsen/ha-xsense-component_test
-
-for stable version add: https://github.com/Elwinmage/ha-xsense-component
+add: https://github.com/Jarnsen/ha-xsense-component_test
 
 ![image](https://github.com/Elwinmage/ha-xsense-component/assets/15807572/48c23cf0-a212-4889-8d08-f995ff2fd5d7)
 
@@ -66,9 +63,9 @@ ____________________________________________________________
 # confirmed devices
  - base station (SBS50)
  - heat alarm (XH02-M) 
- - carbon monoxide alarm (XC01-M, XC04-WX)
- - smoke detector (XS01-M,WX; XS03-WX)
- - carbon and smoke (SC07-WX)
+ - carbon monoxide alarm (XC01-M; XC04-WX)
+ - smoke detector (XS01-M,WX; XS03-WX; XS0B-MR)
+ - carbon and smoke (SC07-WX; XP0A-MR (partly supported))
  - waterleak detector (SWS51)
  - hygrometer-thermometer (STH51)
 ____________________________________________________________
