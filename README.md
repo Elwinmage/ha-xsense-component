@@ -1,3 +1,3 @@
-Please now refer to Jarsen Github:
+Please now refer to Jarnsen Github:
 https://github.com/Jarnsen/ha-xsense-component_test
 
